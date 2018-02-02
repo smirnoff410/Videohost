@@ -14,7 +14,10 @@ namespace Videohost.Controllers
         // GET: Account
         public ActionResult Login()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+                return View();
+            else
+                return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -42,7 +45,10 @@ namespace Videohost.Controllers
 
         public ActionResult Registration()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+                return View();
+            else
+                return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]

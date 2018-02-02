@@ -84,14 +84,7 @@
                                     <span>@item.Email</span>
                                     if (User.Identity.IsAuthenticated)
                                     {
-                                        using (VideohostEntities db = new VideohostEntities())
-                                        {
-                                            User user = db.Users.FirstOrDefault(p => p.Email == User.Identity.Name);
-                                            if (user.role == 1)
-                                            {
-                                                <a style="padding: 0; background: #fff; border: none; color: blue;" href="/Home/DelFriend/@item.Id">Удалить</a>
-                                            }
-                                        }
+                                        <a style="padding: 0; background: #fff; border: none; color: blue;" href="/Home/DelFriend/@item.Id">Удалить</a>
                                     }
                                 }
                             }
@@ -119,7 +112,7 @@
                             }
                         </div>
                     </li>
-                    <li>
+                    @*<li>
                         <input type="checkbox" checked>
                         <i></i>
                         <h2 class="title_block">Плейлисты</h2>
@@ -128,11 +121,8 @@
                             <div class="video-responsive">
                                 <iframe width="1280" height="720" src="http://www.youtube.com/embed/mRrE8CFkkAg" frameborder="0" allowfullscreen></iframe>
                             </div>
-                            <div class="video-responsive">
-                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/mRrE8CFkkAg" frameborder="0" allowfullscreen></iframe>
-                            </div>
                         </div>
-                    </li>
+                    </li>*@
                     <li>
                         <input type="checkbox" checked>
                         <i></i>

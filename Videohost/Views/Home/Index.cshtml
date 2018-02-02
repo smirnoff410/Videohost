@@ -33,6 +33,7 @@
                                 {
                                     <button type="submit" name="action" value="Like" class="btn btn-default">Like</button>
                                 }
+                                <span>@db.LikeDislikes.Where(p => p.id_video == video_id && p.assessment == 1).Count()</span>
                             }
                         </div>
                     }
@@ -52,6 +53,7 @@
                             {
                                 <button type="submit" name="action" value="Dislike" class="btn btn-default">Dislike</button>
                             }
+                            <span>@db.LikeDislikes.Where(p => p.id_video == video_id && p.assessment == 2).Count()</span>
                         }
                         </div>
                     }
